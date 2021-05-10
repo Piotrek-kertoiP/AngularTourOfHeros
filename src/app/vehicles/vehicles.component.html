@@ -5,11 +5,6 @@
 <div><span>make: </span> {{vehicle.make}}</div>
 -->
 
-<div *ngIf="selectedVehicle">
-  <label>make: </label>
-  <input [(ngModel)]="selectedVehicle.make" placeholder="make"/>
-</div>
-
 <ul class="vehicles">
   <li
     [class.selected]="vehicle === selectedVehicle"
@@ -19,3 +14,5 @@
     <span class="badge">{{vehicle.id}}</span> {{vehicle.make}}
   </li>
 </ul>
+
+<app-vehicle-detail [vehicle]="selectedVehicle"></app-vehicle-detail>
